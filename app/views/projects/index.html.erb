@@ -1,0 +1,31 @@
+<h1 style="text-align: center;"> Past Projects </h1>
+
+
+<div class="bContainer">
+  <div class="ui divided items">
+    <% @projects.each do |project| %>
+        <div class="item" id="blog_container">
+          <h2 class="ui top attached header" id="linkEditing"><%= link_to project.title , project.url , :id=> "articleLink" %>
+            <span id="articleDate"><%= project.created_at.strftime(" - %d %b.  %Y")%></span>
+            <% if user_signed_in? %>
+                <% if current_user.email== "kpahawa@gmail.com" %>
+                    <span><%= link_to 'Edit', edit_project_path(project) %></span>
+                <%end%>
+            <%end%>
+          </h2>
+          <div class="ui attached header" id="textboxEditing">
+            <%= simple_format(project.summary, {}, :sanitize => false)  %>
+          </div>
+        </div>
+    <%end%>
+  </div>
+</div>
+
+<br>
+<% if user_signed_in? %>
+    <% if current_user.email== "kpahawa@gmail.com" %>
+        <div class="container" id="newArticleContainer">
+          <%= link_to 'New Project', new_project_path %>
+        </div>
+    <%end%>
+<% end %>

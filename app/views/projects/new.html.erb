@@ -1,0 +1,21 @@
+<h1 style="text-align: center;">New project</h1>
+
+<%= render 'form' %>
+
+<p style="text-align:center">
+  <%= link_to 'Back', projects_path %>
+</p>
+
+<script>
+    window.onload = function() {
+        <% if user_signed_in? %>
+            <% if current_user.email != "kpahawa@gmail.com" %>
+                alert("Sorry, you are not allowed access to this page");
+                window.location.href = "/temp.html";
+            <% end %>
+        <% else %>
+            alert("Sorry, you are not allowed access to this page");
+            window.location.href = "/temp.html";
+        <% end %>
+  };
+</script>

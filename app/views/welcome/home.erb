@@ -1,0 +1,173 @@
+<div class="container" id="topHome">
+  <h1 class="ui header" id="welcomeMessage">Welcome!</h1>
+  <div class="sub header" id="welcomeMessageSub">My name is Karan and this a website by me and about me. Feel free to look around!</div>
+  <div class="ui two column grid">
+    <div class="column">
+      <div class="blogSection">
+        <%= link_to 'Blog', {controller: "articles", action: "index"},:class => "ui green ribbon label" , :id => "homeLabel" %>
+        <span id="blogSpan">Recent Blog Posts</span>
+
+        <% if @arr == [] %>
+            <h1 id="homeArticle">No blog posts yet :( </h1>
+
+        <% else %>
+            <table id="homeTable">
+              <% @arr.each do |article| %>
+                  <tr>
+                    <td>
+                      <h3><%=
+                          link_to article.title,
+                                  {controller: "projects", action: "show", id: article.id},
+                                  :class => "ui dividing header",
+                                  :id => "homeArticle"
+                      %>
+                      </h3>
+                    </td>
+
+                    <td>
+                      <span><%= article.created_at.strftime("%d %b %Y") %></span>
+                    </td>
+                  </tr>
+              <% end %>
+            </table>
+
+        <%end%>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="projSection">
+        <%= link_to 'Projects', {controller: "projects", action: "index"},:class => "ui red ribbon label" , :id => "homeLabel" %>
+        <span id="projSpan">Recent Projects</span>
+
+        <% if @proj == [] %>
+            <h1 id="homeArticle">No Projects yet :( </h1>
+
+        <% else %>
+            <% @proj.each do |project| %>
+                <div class="ui grid" id="gridLayout">
+                      <div class="eight wide column">
+                        <h3><%=
+                            link_to project.title,
+                                    {controller: "projects", action: "index"},
+                                    :class => "ui dividing header",
+                                    :id => "homeArticle"
+                            %>
+                          <span><%= project.created_at.strftime(" - %d %b %Y") %></span>
+                        </h3>
+                      </div>
+
+                      <div class="four wide column" id="projURL">
+                        <a href="<%= project.url %>"> Link to <%= project.title %>  </a>
+                      </div>
+                </div>
+
+            <% end %>
+        <%end%>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="ui two column grid" style="float: left; margin-top: 5em; margin-bottom: 5em;">
+
+    <div class="column">
+      <div class="picSection">
+        <%= link_to 'Pictures', {controller: "pictures", action: "index"},:class => "ui yellow ribbon label" , :id => "homeLabel" %>
+        <span id="picSpan">Recent Pictures</span>
+        <br>
+        <br>
+        <div class="ui two column grid">
+
+          <% if @pics == [] %>
+              <h1 id="homePicture">No Projects yet :( </h1>
+          <%else%>
+              <% i = 0 %>
+              <% @pics.each do |pic| %>
+                  <% url = pic.url %>
+                  <% title = pic.title %>
+                  <% summary = pic.description %>
+                  <div class="column">
+                    <a class="image" href="<%= url %>">
+                        <div class="ui special cards" id="homeCards">
+                          <div class = "green card" id="homeCard">
+                            <div class = "dimmable image">
+                              <div class="ui dimmer">
+                                    <div class="content">
+                                      <div class="center">
+                                        <h3 style="background:white;"><%= title %></h3>
+                                        <p style="background:darkgreen;"><%= summary %></p>
+                                      </div>
+                                    </div>
+                              </div>
+                                <img src="<%= url %>" class="homePic">
+                            </div>
+                          </div>
+                        </div>
+                    </a>
+                  </div>
+
+                    <% i += 1 %>
+              <% end %>
+          <%end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="extraLinks" style="margin-top: 1.3em;">
+          <div class="ui black ribbon label" id="extraLinksLabel">
+            <span id="extraLinksHeader">Extra Links</span>
+          </div>
+
+            <table id="extraLinksTable">
+              <tr>
+                <td>
+                  <div class="ui inverted orange button" style="font-size: 1.5em; margin-left: 13.2em;" onclick="window.location.href='/resume'">
+                    <span><i class="large file outline icon" id="extraIcon"></i> </span> Resume
+                  </div>
+                </td>
+                <td></td>
+              </tr>
+              <tr style="height: 1em; background: #eeeeee !important;">
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ui inverted blue button" style="font-size: 1.5em; margin-left: 1em;" onclick="window.location.href='https://www.facebook.com/TheBluthCompany'">
+                    <span><i class="large facebook icon" id="extraIcon"></i> </span> Facebook
+                  </div>
+                </td>
+                <td>
+                  <div class="ui inverted red button" style="font-size: 1.5em; margin-left: 3em;" onclick="window.location.href='/contact'">
+                    <span><i class="large mail icon" id="extraIcon"></i> </span> Contact
+                  </div>
+                </td>
+              </tr>
+              <tr style="height: 1em; background: #eeeeee;">
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="ui inverted black button" style="font-size: 1.5em; margin-left: 6em;" onclick="window.location.href='https://www.linkedin.com/in/kpahawa'">
+                    <span><i class="large linkedin square icon" id="extraIcon"></i> </span> LinkedIn
+                  </div>
+                </td>
+                <td>
+                  <div class="ui inverted white button" style="font-size: 1.5em; margin-left: -2em;" onclick = "window.location.href='https://github.com/kpahawa'">
+                    <span><i class="large github square icon" id="extraIcon"></i> </span> Github
+                  </div>
+                </td>
+              </tr>
+            </table>
+        </div>
+      </div>
+  </div>
+</div>
+<script>
+    $('.special.cards .image').dimmer({
+        on: 'hover'
+    });
+</script>

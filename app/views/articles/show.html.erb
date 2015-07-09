@@ -1,0 +1,17 @@
+<div class="container" id="articleContainer">
+  <h1 style="margin-bottom: -.1em; font-size: 4rem; text-align: center !important;">
+    <%= @article.title %>
+  </h1>
+  <span style="font-style: italic; font-size: small; text-align: center !important;"><%= @article.created_at.strftime("%d %b.  %Y")%></span>
+  <%= simple_format(@article.text, {:id=>"articleText"}, :sanitize => false) %>
+
+  <% if user_signed_in? %>
+      <% if current_user.email== "kpahawa@gmail.com" %>
+          <%= link_to 'Edit', edit_article_path(@article) %> |
+          <%= link_to 'Back', articles_path %>
+      <%end%>
+  <%else%>
+      <%= link_to 'Back', articles_path %>
+  <% end %>
+
+</div>
