@@ -33,7 +33,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
     @word = $storage
       if @word == params[:contact][:skey]
-        binding.pry
+        #binding.pry
         if @contact.save
           $errors = 0
           @num_errors = 0
@@ -47,7 +47,7 @@ class ContactsController < ApplicationController
         end
       else
         @num_errors = 1
-        binding.pry
+        #binding.pry
         format.html { redirect_to :back, notice: 'Error, Invalid Entry, or you are on the List Already!',:locals => @contact.errors}
         format.json { redirect_to :back, @contact.errors }
       end
