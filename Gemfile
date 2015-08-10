@@ -7,6 +7,8 @@ gem 'simple_form'
 gem 'mail_form'
 gem 'foundation-rails', '5.4.3.1'
 gem 'tinymce-rails'
+gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use postgresql as the database for Active Record
@@ -43,3 +45,4 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
+ruby "2.1.5"
