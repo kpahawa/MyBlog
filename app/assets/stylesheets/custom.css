@@ -100,7 +100,7 @@
 }
 
 #homePicture {
-    margin-left: 4em;
+    /*margin-left: 4em;*/
 }
 
 #homepicture:hover {
@@ -452,4 +452,17 @@ tr:nth-child(odd) {
 
 #formLabel {
     font-size: medium !important;
+}
+
+.field_with_errors {
+    background-color: rgba(255, 0, 0, 0.71);
+    width: 100% !important;
+}
+
+#contact_email {
+    height:100% !important;
+}
+
+.user.icon:before {
+    margin-top: .1em !important;
 }

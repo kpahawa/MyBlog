@@ -14,10 +14,10 @@
             <table id="homeTable">
               <% @arr.each do |article| %>
                   <tr>
-                    <td>
+                    <td style="width: 35% !important;">
                       <h3><%=
                           link_to article.title,
-                                  {controller: "projects", action: "show", id: article.id},
+                                  {controller: "articles", action: "show", id: article.id},
                                   :class => "ui dividing header",
                                   :id => "homeArticle"
                       %>
@@ -80,7 +80,7 @@
         <div class="ui two column grid">
 
           <% if @pics == [] %>
-              <h1 id="homePicture">No Projects yet :( </h1>
+              <h1 id="homePicture">No Pictures yet :( </h1>
           <%else%>
               <% i = 0 %>
               <% @pics.each do |pic| %>

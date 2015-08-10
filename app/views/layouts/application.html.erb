@@ -42,7 +42,8 @@
                                     <i class="big folder open icon"></i>
                                     <label id="navBarLabel">Projects</label>
                                   </a>
-                                  <a class="item">
+                                  <a class="<%= 'active ' if current_page?(contacts_path) %>item"
+                                     style=" <%= 'background:darkgreen; ' if current_page?(contacts_path) %> " href="/contacts/new">
                                     <i class="big mail icon"></i>
                                     <label id="navBarLabel">Contact</label>
                                   </a>

@@ -51,15 +51,6 @@ ActiveRecord::Schema.define(version: 20150526145833) do
     t.datetime "updated_at"
   end
 
-  create_table "subscribers", force: true do |t|
-    t.string   "first"
-    t.string   "last"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "subscribed"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false

@@ -2,30 +2,38 @@
   <h2 style="text-align: center;">Send Me A Message!</h2>
 
   <div class="contactform">
-    <%= form_for @contact, html: { :data=> {abide: ''}, :class => 'ui form'} do |f| %>
+    <%= simple_form_for @contact, html: { :data=> {abide: ''}, :class => 'ui form'} do |f| %>
+        <%= f.error_notification %>
+        <h4>These are the errors in your form</h4>
+        <% @contact.errors.messages.each do |m| %>
+            <%= m %>
+        <%end%>
+
         <div class="field">
           <label id="formLabel">Name</label>
           <div class="two fields">
             <div class="field">
-              <%= f.text_field :first, :required => "[a-zA-Z]+" %>
+              <%= f.input :first, :placeholder => "First Name" , :pattern=> "nametype", required:true%>
             </div>
             <small class="error">First Name is required and must be a string.</small>
             <div class="field">
-              <%= f.text_field :last, :required => "[a-zA-Z]+" %>
+              <%= f.input :last, :placeholder=>"Last Name",:pattern=> "nametype", required:true%>
             </div>
             <small class="error">Last Name is required and must be a string.</small>
           </div>
         </div>
         <label id="formLabel"> Email </label>
         <div class="ui icon input">
-          <%= f.text_field :email, :required => "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" %>
+          <%= f.input :email, :placeholder => "Email@Email.com", type: "email", required:true, style: "height: 100% !important" %>
           <i class="user icon"></i>
         </div>
         <small class="error">An email address is required.</small>
         <div class="field">
           <label id="formLabel">Message</label>
-          <%= f.text_area :message, :as => :text, :required => true, :input_html => {:rows =>10} %>
+          <%= f.input :message, :as => :text, :input_html => {:rows =>10},required:true, :placeholder=>"Your message" %>
         </div>
+        <small class="error">Please leave me a message!</small>
+
         <div class="field">
           <label id="formLabel"> Secret Key </label>
           <div class="three fields">
@@ -33,64 +41,39 @@
               <div class="ui inverted red button" onclick="showHiddenKey()">Show hidden key</div>
             </div>
             <div class="field" id="secretKeyLocation"></div>
-            <div class="field">
-              <input name="secretkey" placeholder="Secret Key" type="text" style="height: 2.6em !important;" required data-equalto="<%= @word %>">
-            </div>
-            <small class="error">The secret key must match to prove that you are human!</small>
+            <div class="field" style="margin-top: -1.2em !important;">
 
+              <%= f.input :skey,:name=>"secretKey", :equalTo=>@word, required:true, :placeholder=>"Secret Key",:style=>"height: 2.8em !important;", :id=>"skey"%>
+          </div>
+            <small class="error">The secret key must match to prove that you are human!</small>
           </div>
         </div>
-
         <div>
-          <%= f.submit 'Send message', :class=> "ui inverated green button", :id => "submitButton" %>
+          <%= f.submit 'Send message', :class=> "ui inverated green submit button", :id => "submitButton" %>
         </div>
     <% end %>
   </div>
 </div>
+<!--<script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>-->
+<!--<script src="http://jqueryvalidation.org/files/dist/additional-methods.min.js"></script>-->
 
 <script>
-    $(document).foundation('abide');
-//    $('.simple_form.ui.form.new_contact')
-//        .form({
-//            first: {
-//                identifier: 'first',
-//                rules: [
-//                    {
-//                        type: 'empty',
-//                        prompt: 'Please enter your first name'
-//                    }
-//                ]
-//            },
-//            last: {
-//                identifier: 'last',
-//                rules: [
-//                    {
-//                        type: 'empty',
-//                        prompt: 'Please enter your first name'
-//                    }
-//                ]
-//            },
-//            email: {
-//                identifier: 'email',
-//                rules: [
-//                    {
-//                        type: 'email',
-//                        prompt: 'Please enter a valid email'
-//                    }
-//                ]
-//            },
-//            subscribe: {
-//                identifier: 'subscribe',
-//                rules: [
-//                    {
-//                        type: 'empty',
-//                        prompt: 'You must check if you want to subscribe or not!'
-//                    }
-//                ]
-//            }
-//        });
+
+    $(document).foundation({
+        abide:{
+            patterns: {
+                nametype: /[a-zA-Z]+/
+            }
+        }
+    });
+
+    $("#new_contact").on('invalid.fndtn.abide', function () {
+        console.log('invalid!');
+    });
+
     function showHiddenKey() {
         var secretKeyLocation = document.getElementById("secretKeyLocation");
-        secretKeyLocation.innerHTML = "<div class = 'ui blue label' id='skLocation'><%= @word %></p>";
+        console.log("<%= @word %>");
+        secretKeyLocation.innerHTML = "<div class = 'ui blue label' id='skLocation'><p><%= @word %></p>";
     }
 </script>

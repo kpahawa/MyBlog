@@ -4,9 +4,12 @@ class ContactsController < ApplicationController
 
   respond_to :html
 
+  $storage = nil
+  $errors=0
   def index
     @contacts = Contact.all
     respond_with(@contacts)
+    #@word = generateNew
   end
 
   def show
@@ -15,7 +18,10 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
-    @word = generateNew()
+    # binding.pry
+    $storage = generateNew
+    @word = $storage
+
     respond_with(@contact)
   end
 
@@ -24,13 +30,27 @@ class ContactsController < ApplicationController
 
   def create
     @contact = Contact.new(contact_params)
-    #binding.pry
-
-    if @contact.first.blank? || @contact.last.blank? || @contact.email.blank? || @contact[:message].blank?
-      flash[:error]= "Your message was unsuccessful. Please check your message fields"
-    else
-      @contact.save
-      respond_with(@contact)
+    respond_to do |format|
+    @word = $storage
+      if @word == params[:contact][:skey]
+        binding.pry
+        if @contact.save
+          $errors = 0
+          @num_errors = 0
+          format.html { redirect_to :back, notice: 'Thanks for the message!' }
+          format.json { redirect_to :back, status: :created, location: @contact }
+        else
+          @num_errors = 1
+          # binding.pry
+          format.html { redirect_to :back, notice: 'Error, Invalid Entry, or you are on the List Already!', :locals => @contact.errors }
+          format.json { redirect_to :back, @contact.errors }
+        end
+      else
+        @num_errors = 1
+        binding.pry
+        format.html { redirect_to :back, notice: 'Error, Invalid Entry, or you are on the List Already!',:locals => @contact.errors}
+        format.json { redirect_to :back, @contact.errors }
+      end
     end
   end
 
@@ -44,21 +64,23 @@ class ContactsController < ApplicationController
     respond_with(@contact)
   end
 
+  def return_word
+    @word = generateNew
+  end
+
   private
-    def set_contact
-      @contact = Contact.find(params[:id])
-    end
-
-    def contact_params
-      params.require(:contact).permit(:first, :last, :email, :subscribed, :message)
-    end
-
     def generateNew
       r = Random.new
       start = r.rand(3...5)
       sec = SecureRandom.hex(5)
       endIndex = start + 4
       @word = sec[start..endIndex]
-      return @word
+    end
+    def set_contact
+      @contact = Contact.find(params[:id])
+    end
+
+    def contact_params
+      params.require(:contact).permit(:first, :last, :email, :subscribed, :message,:skey)
     end
 end
