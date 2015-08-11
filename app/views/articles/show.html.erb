@@ -1,8 +1,9 @@
-<div class="container" id="articleContainer">
-  <h1 style="margin-bottom: -.1em; font-size: 4rem; text-align: center !important;">
+<div class="container" id="articleContainer" xmlns="http://www.w3.org/1999/html">
+  <h1 style="margin-bottom: -.1em; font-size: 4rem; text-align: center !important; font-family:'Lato, Helvetica Neue, Arial, Helvetica, sans-serif';">
     <%= @article.title %>
   </h1>
   <span style="font-style: italic; font-size: small; text-align: center !important;"><%= @article.created_at.strftime("%d %b.  %Y")%></span>
+  </br>
   <%= simple_format(@article.text, {:id=>"articleText"}, :sanitize => false) %>
 
   <% if user_signed_in? %>
