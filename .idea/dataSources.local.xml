@@ -5,9 +5,7 @@
       <user-name>postgres</user-name>
       <user-password>dfc1dfdadfcbdfc2dfcbdfdddfcb</user-password>
     </data-source>
-    <data-source name="Rails Blog: test" uuid="9a95e21d-654e-45b9-a052-aae0cf442fdb">
-      <secret-storage>memory</secret-storage>
-    </data-source>
+    <data-source name="Rails Blog: test" uuid="9a95e21d-654e-45b9-a052-aae0cf442fdb" />
     <data-source name="Rails Blog: production" uuid="c6269954-5684-4dc1-a2cc-92fd4b74d16e">
       <user-name>Blog</user-name>
       <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe8dfe6dfe5dfeddff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>

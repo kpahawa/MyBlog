@@ -44,25 +44,36 @@
             <h1 id="homePicture">No Projects yet :( </h1>
 
         <% else %>
-            <% @proj.each do |project| %>
-                <div class="ui grid" id="gridLayout">
-                      <div class="eight wide column">
-                        <h3><%=
-                            link_to project.title,
-                                    {controller: "projects", action: "index"},
-                                    :class => "ui dividing header",
-                                    :id => "homeArticle"
-                            %>
-                          <span><%= project.created_at.strftime(" - %d %b %Y") %></span>
-                        </h3>
-                      </div>
+            <table style="margin-top: .6em;border-color: #EEEEEE;">
+              <% @proj.each do |project| %>
+                  <tr style="margin-bottom: .5em;">
+                    <td>
+                      <h3><%=
+                          link_to project.title,
+                                  {controller: "projects", action: "index"},
+                                  :class => "ui dividing header",
+                                  :id => "homeArticle"
+                      %>
+                        <span><%= project.created_at.strftime(" - %d %b %Y") %></span>
+                      </h3>
+                    </td>
+                    <td>
+                      <a href="<%= project.url %>" id="projURL"> Project Link  </a>
+                    </td>
+                  </tr>
+                  <!--<div class="ui grid" id="gridLayout">-->
+                    <!--<div class="six wide column" style="width: 50% !important;">-->
+                      <!-- -->
+                    <!--</div>-->
 
-                      <div class="four wide column" id="projURL">
-                        <a href="<%= project.url %>"> Link to <%= project.title %>  </a>
-                      </div>
-                </div>
+                    <!--<div class="four wide column" id="projURL">-->
+                      <!-- -->
+                    <!--</div>-->
+                  <!--</div>-->
 
-            <% end %>
+              <% end %>
+            </table>
+
         <%end%>
         
       </div>
