@@ -452,7 +452,7 @@ tr:nth-child(odd) {
 
 #articleText {
     color: black;
-    font-size: large;
+    font-size: medium;
 }
 
 #loginForm {
@@ -471,6 +471,15 @@ tr:nth-child(odd) {
 
 #homeCards {
     width: 80%;
+}
+#homeCards2 {
+    width: 105%;
+}
+
+#picIndexColumn {
+    /*width: 17%;*/
+    padding: 0 !important;
+
 }
 
 #homeCard {

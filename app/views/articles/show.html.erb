@@ -4,6 +4,8 @@
   </h1>
   <span style="font-style: italic; font-size: small; text-align: center !important;"><%= @article.created_at.strftime("%d %b.  %Y")%></span>
   </br>
+  <br>
+
   <%= simple_format(@article.text, {:id=>"articleText"}, :sanitize => false) %>
 
   <% if user_signed_in? %>
