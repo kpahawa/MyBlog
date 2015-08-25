@@ -498,7 +498,10 @@ tr:nth-child(odd) {
     float: left;
     opacity: .6;
 }
-
+.picContainer {
+    height: 75% !important;
+    width: 75% !important;;
+}
 #restrictedImage div:nth-child(1){
      background-color: #FF0000;
      color: #FFF;

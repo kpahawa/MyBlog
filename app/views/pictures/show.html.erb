@@ -1,22 +1,23 @@
-<p>
-  <strong>Title:</strong>
-  <%= @picture.title %>
+<p style="text-align: center">
+  <strong><%= @picture.title %></strong>
 </p>
 
-<p>
-  <strong>Description:</strong>
+<p style="text-align: center">
   <%= @picture.description %>
 </p>
+<div class="container"><img src="<%= @picture.url %>" class="picContainer"></div>
 
-<p>
-  <strong>Url:</strong>
-  <%= @picture.url %>
-</p>
 
-<p>
-  <strong>Datetime:</strong>
-  <%= @picture.datetime %>
-</p>
+<% if user_signed_in? %>
+    <% if current_user.email== "kpahawa@gmail.com" %>
+        <div class="container" style="margin-top: 5em !important;">
+          <%= link_to 'Edit', edit_picture_path(@picture),:class => "ui red button" %> |
+          <%= link_to 'Back', pictures_path,:class => "ui blue button" %>
+        </div>
 
-<%= link_to 'Edit', edit_picture_path(@picture) %> |
-<%= link_to 'Back', pictures_path %>
+    <%end%>
+<%else%>
+    <div class="container" style="margin-top: 5em !important;">
+      <%= link_to 'Back', pictures_path,:class => "ui blue button" %>
+    </div>
+<%end%>

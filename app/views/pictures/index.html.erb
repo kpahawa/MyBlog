@@ -35,7 +35,7 @@
 
     <% else %>
     <% i = 0 %>
-    <table style="border-color:#EEE;background-color:#EEE !important;">
+    <table style="border-color:#EEE;background-color:#EEE !important;margin-left: 3em; !important;">
       <% @pictures.each do |pic| %>
           <% if i%5 != 0%>
             <td>
@@ -44,7 +44,7 @@
               <% title = pic.title %>
               <% summary = pic.description %>
               <div class="column" id="picIndexColumn">
-                <a class="image" href="<%= url %>">
+                <a class="image" href="/pictures/<%= pic.id %>">
                   <div class="ui special cards" id="homeCards2">
                     <div class = "green card" id="homeCard">
                       <div class = "dimmable image">
