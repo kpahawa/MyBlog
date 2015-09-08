@@ -18,10 +18,10 @@ class ContactsController < ApplicationController
 
   def new
     @contact = Contact.new
-    # binding.pry
     $storage = generateNew
     @word = $storage
-
+    @errors = $errors
+    $errors = 0
     respond_with(@contact)
   end
 
@@ -33,21 +33,17 @@ class ContactsController < ApplicationController
     respond_to do |format|
     @word = $storage
       if @word == params[:contact][:skey]
-        #binding.pry
         if @contact.save
-          $errors = 0
-          @num_errors = 0
+          $errors = -1
           format.html { redirect_to :back, notice: 'Thanks for the message!' }
           format.json { redirect_to :back, status: :created, location: @contact }
         else
-          @num_errors = 1
-          # binding.pry
+          $errors = @contact.errors.messages
           format.html { redirect_to :back, notice: 'Error, Invalid Entry, or you are on the List Already!', :locals => @contact.errors }
           format.json { redirect_to :back, @contact.errors }
         end
       else
-        @num_errors = 1
-        #binding.pry
+        $errors = 1
         format.html { redirect_to :back, notice: 'Error, Invalid Entry, or you are on the List Already!',:locals => @contact.errors}
         format.json { redirect_to :back, @contact.errors }
       end

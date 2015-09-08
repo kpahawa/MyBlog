@@ -1,12 +1,22 @@
 <div align="center">
   <h2 style="text-align: center;">Send Me A Message!</h2>
 
-  <div class="contactform">
+  <div class="container" id="contactForm">
     <%= simple_form_for @contact, html: { :data=> {abide: ''}, :class => 'ui form'} do |f| %>
-        <%= f.error_notification %>
-        <h4>These are the errors in your form</h4>
-        <% @contact.errors.messages.each do |m| %>
-            <%= m %>
+        <% if @errors != -1 %>
+            <% if @errors == 1 %>
+                <div class="ui red label"> Please make sure that you fill out the secret properly. I need to know you're human! </div>
+            <% elsif @errors == 0 %>
+
+            <%else %>
+                <% @errors.keys.each do |m| %>
+                    <div class="container" style="margin-bottom: .5em;">
+                      <div class="ui red label" style="width: 100%"><%= @errors[m][0] %></div>
+                    </div>
+                <% end %>
+            <%end %>
+        <% else %>
+            <div class="ui green label">Your message submitted successfully! I will get back to you ASAP</div>
         <%end%>
 
         <div class="field">

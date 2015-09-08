@@ -560,11 +560,12 @@ tr:nth-child(odd) {
     text-align: left;
 }
 
-.contactform {
-    margin-left: 40em;
-    text-align: center;
-    margin-right: 40em;
+@media (min-width: 1000px) {
+    #contactForm {
+        width: 70%;
+    }
 }
+
 
 #submitButton {
     width: 100% !important;
