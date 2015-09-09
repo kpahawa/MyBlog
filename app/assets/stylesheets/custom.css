@@ -359,15 +359,14 @@ tr:nth-child(odd) {
 }
 
 #resumeButton {
-    width: 65%;
-    margin-left: 21em;
+    width: 75%;
+    /*margin-left: 21em;*/
     /*padding-right: 42em;*/
     /*padding-left: 42em;*/
 }
 #resumeButton2 {
-    width: 65%;
-    margin-left: 21em;
-    margin-top: 10em;
+    width: 75%;
+    /*margin-left: 21em;*/
     /*padding-right: 42em;*/
     /*padding-left: 42em;*/
 }
@@ -382,6 +381,15 @@ tr:nth-child(odd) {
     margin-left: 17em;
 }
 
+#termHeader {
+    color: green !important;
+    text-align: left;
+}
+
+#terminalContainer {
+    margin: auto;
+    width: 80%;
+}
 #blog_container {
     text-align: center;
 }
@@ -591,4 +599,17 @@ tr:nth-child(odd) {
 
 .user.icon:before {
     margin-top: .1em !important;
+}
+
+#cmdTable {
+    background: black !important;
+    border: none;
+}
+
+#cmdCol1 {
+    color: gold !important;
+}
+
+#cmdCol2 {
+    color: lightblue !important;
 }
