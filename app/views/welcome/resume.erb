@@ -87,10 +87,7 @@
     var work = temp +  GTTA + lines+ PL + lines+ Amex + lines + DJ+ lines + Idhasoft + lines +trust;
     jQuery(function($, undefined) {
         $('#term_demo').terminal(function(command, term) {
-            if (command == 'Karan.resume') {
-                term.echo("This is his resume: ");
-            }
-            else if (command.toLowerCase() == "about") {
+            if (command.toLowerCase() == "about") {
                 term.echo("This terminal is sitting on top of a jquery terminal source under the MIT open source license. I did not make the");
                 term.echo("terminal source, I simply customized it to recognize my own API.");
                 term.echo('');
