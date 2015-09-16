@@ -1,7 +1,7 @@
 require 'securerandom'
 class WelcomeController < ApplicationController
   def home
-
+    @num = Contact.all.length
     @articles = Article.all
     @arr = Array.new
     x = 0
@@ -38,7 +38,7 @@ class WelcomeController < ApplicationController
   end
 
   def contact
-   @word = generateNew()
+   @word = generateNew
   end
 
   private

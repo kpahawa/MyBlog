@@ -1,7 +1,8 @@
 <div class="container">
     <h3> My resume is in the terminal below! If you don't want to mess around with the terminal, click
-      <span> <div class="ui button blue" onclick="window.location.href='/assets/Karan Pahawa Resume.pdf'"> here </div> </span> to get my resume as a PDF!</h3>
-    <h3> To see how to use the terminal, simply type in "help"</h3>
+      <span> <div class="ui button blue" onclick="window.location.href='/assets/Karan Pahawa Resume.pdf'"> here </div> </span> to get my resume as a PDF</h3>
+    <h3> To see how to use the terminal, simply type in "help" and click enter!</h3>
+    <h4>If the screen is cluttered, type in "clear". <span style="font-style: oblique; color: maroon;">Note, if the screen is too cluttered, the terminal will clear itself</span></h4>
 </div>
 <div class="container" id="terminalContainer">
   <div id="term_demo" class="terminal" scrolltop="0" style="height:200px"></div>
@@ -111,7 +112,7 @@
                 var x = document.getElementsByClassName("terminal-output")[0];
                 var z = x.innerHTML;
                 var resumeHeader = "<h1 id='termHeader' style = 'color: #c62981 !important;'> My resume! </h1>";
-                x.innerHTML = z  +resumeHeader+ eduHeader + edu + accomplishment + work + lines + skills + contact;
+                x.innerHTML = z + resumeHeader+ eduHeader + edu + accomplishment + work + lines + skills + contact;
             }
             else if (command.toLowerCase() == "karan.experience") {
                 term.echo("");
@@ -151,7 +152,7 @@
                         term.echo(new String(result));
                     }
                 } catch(e) {
-                    term.error(new String(e));
+                    term.error("Sorry, that command is not recognized");
                 }
             } else {
                 term.echo('');

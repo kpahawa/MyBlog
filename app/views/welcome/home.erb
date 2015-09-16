@@ -1,3 +1,10 @@
+<% if user_signed_in? %>
+    <% if current_user.email == "kpahawa@gmail.com" %>
+        <% if @num > 0 %>
+            <%= link_to "You have #{@num} messages to read", {controller: "contacts", action: "index"}, :class => 'ui inverted green button' %>
+        <%end%>
+    <%end%>
+<%end%>
 <div class="container" id="topHome">
   <h1 class="ui header" id="welcomeMessage">Welcome!</h1>
   <div class="sub header" id="welcomeMessageSub">My name is Karan and this a website by me and about me. Feel free to look around!</div>
@@ -47,18 +54,18 @@
             <table style="margin-top: .6em;border-color: #EEEEEE;">
               <% @proj.each do |project| %>
                   <tr style="margin-bottom: .5em;">
-                    <td>
+                    <td style="width: 70% !important;">
                       <h3><%=
                           link_to project.title,
                                   {controller: "projects", action: "index"},
                                   :class => "ui dividing header",
                                   :id => "homeArticle"
                       %>
-                        <span><%= project.created_at.strftime(" - %d %b %Y") %></span>
+                        <span style="font-size: medium">&nbsp;&nbsp;<%=  project.created_at.strftime("%d %b %Y") %></span>
                       </h3>
                     </td>
                     <td>
-                      <a href="<%= project.url %>" id="projURL"> Project Link  </a>
+                      <a href="<%= project.url %>" id="projURL"> Link  </a>
                     </td>
                   </tr>
                   <!--<div class="ui grid" id="gridLayout">-->

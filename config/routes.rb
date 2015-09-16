@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/temp' => 'welcome#temp'
   get '/contact' => 'contacts#new'
   get '/resume' => 'welcome#resume'
+  get '/updated' => 'welcome#updatedResume'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
