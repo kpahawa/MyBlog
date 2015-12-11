@@ -7,10 +7,12 @@ gem 'simple_form'
 gem 'mail_form'
 gem 'foundation-rails', '5.4.3.1'
 gem 'tinymce-rails'
-gem 'rails_12factor', group: :production
-
+# gem 'rails_12factor', group: :production
+# gem 'tzinfo'
+# gem 'tzinfo-data',  platforms: [:x64_mingw, :mingw, :mswin]
+require 'rbconfig'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1.1'
+gem 'rails'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
