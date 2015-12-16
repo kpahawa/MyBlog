@@ -276,6 +276,12 @@ hr {
 #extraIcons {
     padding-right: 2em;
 }
+#homeTextIcon {
+   color:#006400 !important;
+    width: 2em;
+    font-size: 20em;
+    margin-bottom: .1em;
+}
 #extraLinksTable {
     border: none;
     margin-top: 7em;

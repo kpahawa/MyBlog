@@ -8,129 +8,117 @@
 <div class="container" id="topHome">
   <h1 class="ui header" id="welcomeMessage">Welcome!</h1>
   <div class="sub header" id="welcomeMessageSub">My name is Karan and this a website by me and about me. Feel free to look around!</div>
-  <div class="ui three column grid" style="margin-bottom: 10em;">
-    <div class="column">
-      <div class="blogSection">
-        <%= link_to 'Blog', {controller: "articles", action: "index"},:class => "ui green ribbon label" , :id => "homeLabel" %>
-        <span id="blogSpan">Recent Blog Posts</span>
+  <div class="ui container">
+    <div class="ui three column grid" style="margin-bottom: 10em;">
+        <div class="column">
 
-        <% if @arr == [] %>
-            <h1 id="homeArticle">No blog posts yet :( </h1>
+          <div class="ui special cards">
+            <div class = "card" style="width: 100% !important;">
+              <div class = "blurring dimmable image">
+                <div class="ui inverted dimmer transition hidden" style="display: block !important;">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui primary button" onclick = "window.location.href='/articles'">Blog</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <i class="massive file text outline icon" id="homeTextIcon"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <% else %>
-            <table id="homeTable">
-              <% @arr.each do |article| %>
-                  <tr>
-                    <td style="width: 35% !important;">
-                      <h3><%=
-                          link_to article.title,
-                                  {controller: "articles", action: "show", id: article.id},
-                                  :class => "ui dividing header",
-                                  :id => "homeArticle"
-                      %>
-                      </h3>
-                    </td>
+        <div class="column">
+        <div class="projSection">
+          <%= link_to 'Projects', {controller: "projects", action: "index"},:class => "ui red ribbon label" , :id => "homeLabel" %>
+          <span id="projSpan">Recent Projects</span>
 
-                    <td>
-                      <span><%= article.created_at.strftime("%d %b %Y") %></span>
-                    </td>
-                  </tr>
-              <% end %>
-            </table>
+          <% if @proj == [] %>
+              <h1 id="homePicture">No Projects yet :( </h1>
 
-        <%end%>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="projSection">
-        <%= link_to 'Projects', {controller: "projects", action: "index"},:class => "ui red ribbon label" , :id => "homeLabel" %>
-        <span id="projSpan">Recent Projects</span>
-
-        <% if @proj == [] %>
-            <h1 id="homePicture">No Projects yet :( </h1>
-
-        <% else %>
-            <table style="margin-top: .6em;border-color: #EEEEEE;">
-              <% @proj.each do |project| %>
-                  <tr style="margin-bottom: .5em;">
-                    <td style="width: 70% !important;">
-                      <h3><%=
-                          link_to project.title,
-                                  {controller: "projects", action: "index"},
-                                  :class => "ui dividing header",
-                                  :id => "homeArticle"
-                      %>
-                        <span style="font-size: medium">&nbsp;&nbsp;<%=  project.created_at.strftime("%d %b %Y") %></span>
-                      </h3>
-                    </td>
-                    <td>
-                      <a href="<%= project.url %>" id="projURL"> Link  </a>
-                    </td>
-                  </tr>
-                  <!--<div class="ui grid" id="gridLayout">-->
+          <% else %>
+              <table style="margin-top: .6em;border-color: #EEEEEE;">
+                <% @proj.each do |project| %>
+                    <tr style="margin-bottom: .5em;">
+                      <td style="width: 70% !important;">
+                        <h3><%=
+                            link_to project.title,
+                                    {controller: "projects", action: "index"},
+                                    :class => "ui dividing header",
+                                    :id => "homeArticle"
+                        %>
+                          <span style="font-size: medium">&nbsp;&nbsp;<%=  project.created_at.strftime("%d %b %Y") %></span>
+                        </h3>
+                      </td>
+                      <td>
+                        <a href="<%= project.url %>" id="projURL"> Link  </a>
+                      </td>
+                    </tr>
+                    <!--<div class="ui grid" id="gridLayout">-->
                     <!--<div class="six wide column" style="width: 50% !important;">-->
-                      <!-- -->
+                    <!-- -->
                     <!--</div>-->
 
                     <!--<div class="four wide column" id="projURL">-->
-                      <!-- -->
+                    <!-- -->
                     <!--</div>-->
-                  <!--</div>-->
+                    <!--</div>-->
 
-              <% end %>
-            </table>
+                <% end %>
+              </table>
 
-        <%end%>
-        
+          <%end%>
+
+        </div>
       </div>
-    </div>
 
-    <div class="column">
-      <div class="picSection">
-        <%= link_to 'Pictures', {controller: "pictures", action: "index"},:class => "ui yellow ribbon label" , :id => "homeLabel" %>
-        <span id="picSpan">Recent Pictures</span>
-        <br>
-        <br>
-        <div class="ui two column grid">
+        <div class="column">
+        <div class="picSection">
+          <%= link_to 'Pictures', {controller: "pictures", action: "index"},:class => "ui yellow ribbon label" , :id => "homeLabel" %>
+          <span id="picSpan">Recent Pictures</span>
+          <br>
+          <br>
+          <div class="ui two column grid">
 
-          <% if @pics == [] %>
-              <br />
-              <h1 id="homePicture">No Pictures yet :( </h1>
-          <%else%>
-              <% i = 0 %>
-              <% @pics.each do |pic| %>
-                  <% url = pic.url %>
-                  <% title = pic.title %>
-                  <% summary = pic.description %>
-                  <div class="column">
-                    <a class="image" href="/pictures/<%= pic.id %>">
-                      <div class="ui special cards" id="homeCards">
-                        <div class = "green card" id="homeCard">
-                          <div class = "dimmable image">
-                            <div class="ui dimmer">
-                              <div class="content">
-                                <div class="center">
-                                  <h3 style="background:white;"><%= title %></h3>
-                                  <p style="background:darkgreen;"><%= summary %></p>
+            <% if @pics == [] %>
+                <br />
+                <h1 id="homePicture">No Pictures yet :( </h1>
+            <%else%>
+                <% i = 0 %>
+                <% @pics.each do |pic| %>
+                    <% url = pic.url %>
+                    <% title = pic.title %>
+                    <% summary = pic.description %>
+                    <div class="column">
+                      <a class="image" href="/pictures/<%= pic.id %>">
+                        <div class="ui special cards" id="homeCards">
+                          <div class = "green card" id="homeCard">
+                            <div class = "dimmable image">
+                              <div class="ui dimmer">
+                                <div class="content">
+                                  <div class="center">
+                                    <h3 style="background:white;"><%= title %></h3>
+                                    <p style="background:darkgreen;"><%= summary %></p>
+                                  </div>
                                 </div>
                               </div>
+                              <img src="<%= url %>" class="homePic">
                             </div>
-                            <img src="<%= url %>" class="homePic">
                           </div>
                         </div>
-                      </div>
-                    </a>
-                  </div>
+                      </a>
+                    </div>
 
-                  <% i += 1 %>
-              <% end %>
-          <%end %>
+                    <% i += 1 %>
+                <% end %>
+            <%end %>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <!--Just make sure the background color matches this hr tag-->
   <hr>
     <table id="extraLinksTable">
