@@ -2,167 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1386c09a-8db5-491e-956b-af7a99ce2f68" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/homepagepic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/moritower.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/overlay.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/shibs.jpg" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\accordion.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\accordion.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\checkbox.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\checkbox.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\custom.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\dimmer.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\dimmer.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\dropdown.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\dterm.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\form.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\form.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\images.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\modal.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\modal.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\nag.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\nag.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\popup.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\popup.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\progress.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\progress.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\rating.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\rating.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\search.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\search.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\shape.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\shape.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\sidebar.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\sidebar.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\site.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\site.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\state.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\state.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\sticky.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\sticky.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\tab.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\tab.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\transition.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\transition.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\video.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\video.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\visibility.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\javascripts\visibility.min.js" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\accordion.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\accordion.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\ad.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\ad.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\breadcrumb.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\breadcrumb.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\button.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\button.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\card.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\card.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\checkbox.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\checkbox.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\comment.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\comment.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\dimmer.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\dimmer.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\divider.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\divider.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\dropdown.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\dropdown.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\feed.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\feed.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\flag.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\flag.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\form.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\form.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\grid.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\grid.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\header.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\header.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\icon.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\icon.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\image.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\image.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\input.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\input.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\item.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\item.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\label.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\label.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\list.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\list.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\loader.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\loader.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\menu.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\menu.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\message.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\message.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\modal.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\modal.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\nag.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\nag.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\popup.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\popup.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\progress.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\progress.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\rail.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\rail.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\rating.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\rating.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\reset.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\reset.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\reveal.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\reveal.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\search.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\search.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\segment.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\segment.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\shape.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\shape.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\sidebar.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\sidebar.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\site.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\site.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\statistic.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\statistic.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\step.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\step.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\sticky.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\sticky.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\tab.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\tab.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\table.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\table.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\transition.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\transition.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\video.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\components\video.min.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\foundation.css" afterPath="" />
-      <change type="DELETED" beforePath="C:\RailsProjects\Blog\app\assets\stylesheets\foundation_and_overrides.scss" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Blog.iml" afterPath="$PROJECT_DIR$/.idea/Blog.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/_form.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/_form.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/articles.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/articles.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/articles_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/articles_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/create.erb" afterPath="$PROJECT_DIR$/app/views/contacts/create.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/projects/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/home.erb" afterPath="$PROJECT_DIR$/app/views/welcome/home.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pictures/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/projects/index.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/contacts/new.html.erb" afterPath="$PROJECT_DIR$/app/views/contacts/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/projects.css.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/resume.erb" afterPath="$PROJECT_DIR$/app/views/welcome/resume.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/show.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/projects/show.html.erb" afterPath="$PROJECT_DIR$/app/views/projects/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/temp.erb" afterPath="$PROJECT_DIR$/app/views/welcome/temp.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/welcome_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/manifest-0bd0aa80a0f5b1be929312d0216478f4.json" afterPath="$PROJECT_DIR$/public/assets/manifest-0bd0aa80a0f5b1be929312d0216478f4.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Blog.iws" />
@@ -202,11 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2">
-              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.25085324">
+              <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -236,10 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33264032">
+            <state vertical-scroll-proportion="0.0">
               <caret line="376" column="11" selection-start-line="376" selection-start-column="11" selection-end-line="376" selection-end-column="11" />
               <folding />
             </state>
@@ -316,9 +157,9 @@
         <option value="$PROJECT_DIR$/app/views/pictures/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contacts/create.erb" />
         <option value="$PROJECT_DIR$/app/views/contacts/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/contacts/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -745,9 +586,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35015136" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34949496" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1131,8 +972,8 @@
         <state vertical-scroll-proportion="0.19978632">
           <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1194,14 +1035,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.4838705">
@@ -1232,8 +1065,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33264032">
+        <state vertical-scroll-proportion="0.0">
           <caret line="376" column="11" selection-start-line="376" selection-start-column="11" selection-end-line="376" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25085324">
+          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
           <folding />
         </state>
       </provider>
