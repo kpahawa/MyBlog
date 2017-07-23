@@ -1,12 +1,16 @@
 require 'pry'
+# require 'paginate'
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
   def index
-    @articles = Article.all
-    respond_with(@articles)
+    @articles = Article.all.paginate(:page => params[:page], :per_page => 5)
+    @latest_arts = Article.last(5)
+    @latest_arts = @latest_arts.reverse
+    @respond = {:articles=> @articles, :latest_arts=> @latest_arts}
+    respond_with(@respond)
   end
 
   def show
@@ -16,7 +20,7 @@ class ArticlesController < ApplicationController
     # @temp = temp.gsub("\\t","&nbsp&nbsp&nbsp&nbsp")
     # @article.text = @temp
 
-    respond_with(@article.text)
+    respond_with(@article)
   end
 
   def new

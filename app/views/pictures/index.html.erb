@@ -1,7 +1,9 @@
-<h1 style="text-align: center;">My pictures</h1>
+
+
 <% if user_signed_in? %>
     <% if current_user.email== "kpahawa@gmail.com" %>
-
+    <div class="pictures_wrapper picturesBG" id="wrapper">
+      <div class="" id="main">
         <table>
           <thead>
             <tr>
@@ -31,78 +33,78 @@
         <br>
 
         <%= link_to 'New Picture', new_picture_path %>
+      </div>
+    </div>
     <%end%>
 
     <% else %>
-    <% i = 0 %>
-    <table style="border-color:#EEE;background-color:#EEE !important;margin-left: 3em; !important;">
-      <% @pictures.each do |pic| %>
-          <% if i%5 != 0%>
-            <td>
-              <% i +=1 %>
-              <% url = pic.url %>
-              <% title = pic.title %>
-              <% summary = pic.description %>
-              <div class="column" id="picIndexColumn">
-                <a class="image" href="/pictures/<%= pic.id %>">
-                  <div class="ui special cards" id="homeCards2">
-                    <div class = "green card" id="homeCard">
-                      <div class = "dimmable image">
-                        <div class="ui dimmer">
-                          <div class="content">
-                            <div class="center">
-                              <h3 style="background:white;"><%= title %></h3>
-                              <p style="background:darkgreen;"><%= summary %></p>
+
+    <div class="pictures_wrapper picturesBG" id="wrapper">
+      <div class="" id="main">
+
+
+        <div class="main_pictures">
+          <div class="pictures_inner inner">
+            <h1 id="picturesTitle">Pictures</h1>
+
+            <ul id="buttons01">
+              <li><button class="ui inverted red button large" onclick="window.location.href=('/')">Home</button></li>
+              <li><button class="ui inverted blue button large" onclick="window.location.href=('/resume')">Resume</button></li>
+              <li><button class="ui inverted green button large" onclick="window.location.href=('/articles')">Blog</button></li>
+              <li><button class="ui inverted orange button large" onclick="window.location.href=('/projects')">Projects</button></li>
+            </ul>
+
+            <div class="gallery" id="gallery01">
+              <div class="inner">
+                <ul>
+                  <% @pictures.each do |pic| %>
+                      <% url = pic.url %>
+                      <% title = pic.title %>
+                      <% summary = pic.description %>
+                      <li>
+                        <a class="image thumbnail hoverable" onclick="showModal('<%= url %>', '<%= title %>', '<%= summary %>')">
+                          <div id="homeCards2">
+                            <div id="homeCard">
+                              <img src="<%= url %>" class="homePic">
                             </div>
                           </div>
-                        </div>
-                        <img src="<%= url %>" class="homePic">
-                      </div>
-                    </div>
-                  </div>
-                </a>
+                        </a>
+                      </li>
+                    <% end %>
+                </ul>
               </div>
-            </td>
-            <% if i == 5 %>
-              </tr>
-            <% end %>
-          <% else %>
-              <tr>
-                <td>
-                  <% i +=1 %>
-                  <% url = pic.url %>
-                  <% title = pic.title %>
-                  <% summary = pic.description %>
-                  <div class="column" id="picIndexColumn">
-                    <a class="image" href="/pictures/<%= pic.id %>">
-                      <div class="ui special cards" id="homeCards2">
-                        <div class = "green card">
-                          <div class = "dimmable image">
-                            <div class="ui dimmer">
-                              <div class="content">
-                                <div class="center">
-                                  <h3 style="background:white;"><%= title %></h3>
-                                  <p style="background:darkgreen;"><%= summary %></p>
-                                </div>
-                              </div>
-                            </div>
-                            <img src="<%= url %>" class="homePic">
-                          </div>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-                </td>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-          <% end %>
+    <div class="ui modal">
+      <i class="close icon"></i>
+      <div class="header" id="pic_title"></div>
+      <div class="image" style="text-align: center;">
+        <div class="ui huge image modalImg">
+          <img id="pic_url">
+        </div>
+        <div class="description">
+          <div class="ui header" id="desc"></div>
 
-
-      <% end %>
-    </table>
-
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui black deny button">
+          Close
+        </div>
+      </div>
+    </div>
 <%end%>
 <script>
-    $('.special.cards .image').dimmer({
-        on: 'hover'
-    });
+    function showModal(url, title, desc) {
+        console.log("url is: " + url);
+        $("#pic_url").attr("src",url);
+        $("#pic_title").html(title);
+        $("#desc").html(desc);
+
+        $('.ui.modal').modal('show');
+    }
 </script>

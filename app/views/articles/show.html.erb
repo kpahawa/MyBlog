@@ -1,20 +1,36 @@
-<div class="container" id="articleContainer" xmlns="http://www.w3.org/1999/html">
-  <h1 style="margin-bottom: -.1em; font-size: 4rem; text-align: center !important; font-family:'Lato, Helvetica Neue, Arial, Helvetica, sans-serif';">
-    <%= @article.title %>
-  </h1>
-  <span style="font-style: italic; font-size: small; text-align: center !important;"><%= @article.created_at.strftime("%d %b.  %Y")%></span>
-  </br>
-  <br>
+<div id="container" xmlns="http://www.w3.org/1999/html" style="text-align: center;">
+  <div class="inner">
+    <article class="box post post-excerpt">
+      <header style="text-align: center;">
+        <h2><%= @article.title %></h2>
+        <span class="article_date">
+          <span class="date"><span class="month"><%= @article.created_at.strftime("%b")%></span>
+          <span class="day"><%= @article.created_at.strftime(" %d ")%></span>
+          <span class="year">, <%= @article.created_at.strftime(" %Y ")%></span></span>
+        </span>
 
-  <%= simple_format(@article.text, {:id=>"articleText"}, :sanitize => false) %>
+      </header>
 
-  <% if user_signed_in? %>
-      <% if current_user.email== "kpahawa@gmail.com" %>
-          <%= link_to 'Edit', edit_article_path(@article),:class => "ui red button" %> |
+      <div class="articleContainer">
+        <p>
+          <%= simple_format(@article.text, {:id=>'articleText'}, :sanitize => false) %>
+        </p>
+      </div>
+
+      <hr>
+    </article>
+    <div class="control_buttons">
+      <% if user_signed_in? %>
+          <% if current_user.email== "kpahawa@gmail.com" %>
+              <%= link_to 'Edit', edit_article_path(@article),:class => "ui red button" %> |
+              <%= link_to 'Back', articles_path,:class => "ui blue button" %>
+          <%end%>
+      <%else%>
           <%= link_to 'Back', articles_path,:class => "ui blue button" %>
-      <%end%>
-  <%else%>
-      <%= link_to 'Back', articles_path,:class => "ui blue button" %>
-  <% end %>
+      <% end %>
+    </div>
+
+  </div>
+
 
 </div>

@@ -1,7 +1,13 @@
-<h1 style="text-align: center;">Editing project</h1>
+<div class="projectWrapper">
+  <div class="project_main">
+    <div class="inner">
+        <h1 style="text-align: center;">Editing project</h1>
 
-<%= render 'form' %>
-<p style="text-align: center;">
-  <%= link_to 'Show', @project %> |
-  <%= link_to 'Back', projects_path %>
-</p>
+        <%= render 'form' %>
+        <p style="text-align: center;">
+          <%= link_to 'Show', @project, {:class=>'ui blue button'} %> |
+          <%= link_to 'Back', projects_path , {:class=>'ui black button'}%>
+        </p>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
     @num = Contact.all.length
     @arr = Article.last
 
+    @num_arr = (Article.all).size
     @projects = Project.all
     @proj = Array.new
 

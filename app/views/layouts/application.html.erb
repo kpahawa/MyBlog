@@ -3,69 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="description" content="Karan's website">
+    <meta property="og:site_name" content="k5p6">
+    <meta property="og:title" content="k5p6">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Karan's website">
 
-    <title><%= content_for?(:title) ? yield(:title) : "Karan's Page" %></title>
+  <title><%= content_for?(:title) ? yield(:title) : "Karan's Page" %></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100italic,400,400italic%7CSource+Sans+Pro:200,200italic,400,400italic" rel="stylesheet" type="text/css">
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application" 'data-turbolinks-track' => true %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+
   </head>
 
-
-  <body style="background: #eeeeee;">
-
-      <div class="top-bar" role="navigation" id="navBar">
-          <div class="row">
-                <div class="large-12 columns">
-                      <ul class="button-group">
-                            <li class="icon-bar five-up">
-                                  <a class=" <%= 'active ' if current_page?(root_path) %>item"
-                                     style=" <%= 'background:darkgreen; ' if current_page?(root_path) %> " href="/">
-                                    <i class="big home icon"> </i>
-                                    <label id="navBarLabel">Home</label>
-                                  </a>
-                                  <a class=" <%= 'active ' if current_page?(resume_path) %>item"
-                                     style=" <%= 'background:darkgreen; ' if current_page?(resume_path) %> " href="/resume">
-                                    <i class="big file outline icon"></i>
-                                    <label id="navBarLabel">Resume</label>
-                                  </a>
-                                  <a class=" <%= 'active ' if current_page?(articles_path) %>item"
-                                     style=" <%= 'background:darkgreen; ' if current_page?(articles_path) %> " href="/articles">
-                                    <i class="big comment icon"></i>
-                                    <label id="navBarLabel">Blog</label>
-                                  </a>
-                                  <a class=" <%= 'active ' if current_page?(projects_path) %>item"
-                                     style=" <%= 'background:darkgreen; ' if current_page?(projects_path) %> " href="/projects">
-                                    <i class="big folder open icon"></i>
-                                    <label id="navBarLabel">Projects</label>
-                                  </a>
-                                  <a class="<%= 'active ' if current_page?(contacts_path) %>item"
-                                     style=" <%= 'background:darkgreen; ' if current_page?(contacts_path) %> " href="/contacts/new">
-                                    <i class="big mail icon"></i>
-                                    <label id="navBarLabel">Contact</label>
-                                  </a>
-                            </li>
-                        </ul>
-                </div>
-          </div>
-      </div>
-      <br>
-      <p>
+  <body class="is-ready">
         <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
 
             <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'ui inverted red button' %>
         <% end %>
       <%= yield %>
-      <div class="footer" id="footerContainer">
-        <h3 style="margin-top: 1em;"><span><i class="large copyright icon" id="footerIcon"></i> </span> Karan Pahawa - 2015</h3>
-        <h2>Special thanks to the <a href="https://foundation.zurb.com" style="color: #009FDA">Foundation</a>  and
-          <a href="http://semantic-ui.com/" style="color: #009FDA"> Semantic UI </a> team</h2>
-      </div>
-
   </body>
 </html>

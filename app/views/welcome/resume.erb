@@ -1,12 +1,26 @@
-<div class="container">
-    <h3> My resume is in the terminal below! If you don't want to mess around with the terminal, click
-      <span> <div class="ui button blue" onclick="window.location.href='/assets/Karan Pahawa Resume.pdf'"> here </div> </span> to get my resume as a PDF</h3>
-    <h3> To see how to use the terminal, simply type in "help" and click enter!</h3>
-    <h4>If the screen is cluttered, type in "clear". <span style="font-style: oblique; color: maroon;">Note, if the screen is too cluttered, the terminal will clear itself</span></h4>
-</div>
-<div class="container" id="terminalContainer">
-  <div id="term_demo" class="terminal" scrolltop="0" style="height:200px"></div>
-</div>
+<div class="terminal_screen_bg">
+  <div id="main">
+    <div id="inner" style="margin-bottom: 2rem;">
+        <ul id="buttons01" style="text-align: center">
+            <li><button class="ui  red button large" onclick="window.location.href=('/')">Home</button></li>
+            <li><button class="ui black button large" onclick="window.location.href=('/contact')">Contact</button></li>
+            <li><button class="ui green button large" onclick="window.location.href=('/articles')">Blog</button></li>
+            <li><button class="ui orange button large" onclick="window.location.href=('/projects')">Projects</button></li>
+        </ul>
+      <hr>
+        <div>
+            <header style="text-align: center">My Resume</header>
+            <h3> My resume is in the terminal below! If you don't want to mess around with the terminal, click
+              <span> <div class="ui button blue" onclick="window.location.href='/assets/Karan Pahawa Resume.pdf'"> here </div> </span> to get my resume as a PDF</h3>
+            <h3> To see how to use the terminal, simply type in "help" and click enter!</h3>
+            <h4>If the screen is cluttered, type in "clear". <span style="font-style: oblique; color: maroon;">Note, if the screen is too cluttered, the terminal will clear itself</span></h4>
+        </div>
+        <div class="container" id="terminalContainer">
+          <div id="term_demo" class="terminal" scrolltop="0" style="height:200px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 <script>
     var Idhasoft = "<h3 id='termHeader' style='color: darkgoldenrod !important;'>Idhasoft <span style = 'font-size:15px;color:green !important;'> &nbsp- Supply Chain Analyst </span></h3>" +
             "<h4 id='termHeader'>Atlanta, GA - Spring 2013 to Fall 2013</h4>" +

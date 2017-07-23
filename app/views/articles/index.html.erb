@@ -1,47 +1,167 @@
-<h1 style="text-align: center;">Blog Posts</h1>
+ <div id="content">
+  <div class="inner">
 
-<!--<table>-->
-  <!--<thead>-->
-    <!--<tr>-->
-      <!--<th>Title</th>-->
-      <!--<th>Text</th>-->
-      <!--<th>Date</th>-->
-      <!--<th colspan="3"></th>-->
-    <!--</tr>-->
-  <!--</thead>-->
+    <!-- Post -->
+    <% @articles.order('updated_at DESC').each do |article| %>
 
-  <!--<tbody>-->
-    <!--<% @articles.each do |article| %>-->
-      <!--<tr>-->
-        <!--<td><%= article.title %></td>-->
-        <!--<td><%= article.text %></td>-->
-        <!--<td><%= article.created_at.strftime("%d %b. %Y") %></td>-->
-        <!--<td><%= link_to 'Show', article %></td>-->
-        <!--<td><%= link_to 'Edit', edit_article_path(article) %></td>-->
-        <!--<td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-      <!--</tr>-->
-    <!--<% end %>-->
-  <!--</tbody>-->
-<!--</table>-->
+    <article class="box post post-excerpt">
+      <header>
+        <h2><a href="#"><%= link_to article.title , article , :id=> "articleLink" %></a></h2>
+      </header>
+      <div class="info">
+        <span class="date"><span class="month"><%= article.created_at.strftime("%b")%></span>
+          <span class="day"><%= article.created_at.strftime(" %d ")%></span>
+          <span class="year"><%= article.created_at.strftime(" %Y ")%></span></span>
 
-<br>
-<div class="bContainer">
-  <div class="ui divided items">
-    <% @articles.each do |article| %>
-        <div class="item" id="blog_container">
-          <!--<div class = "content">-->
-            <h2 class="ui top attached header" id="linkEditing"><%= link_to article.title , article , :id=> "articleLink" %>
-              <span id="articleDate"><%= article.created_at.strftime(" - %d %b.  %Y")%></span>
-            </h2>
+        <!--<ul class="stats">-->
+          <!--<li><a href="#" class="icon fa-comment">16</a></li>-->
+          <!--<li><a href="#" class="icon fa-heart">32</a></li>-->
+          <!--<li><a href="#" class="icon fa-twitter">64</a></li>-->
+          <!--<li><a href="#" class="icon fa-facebook">128</a></li>-->
+        <!--</ul>-->
+      </div>
+      <p>
+        <% if article.text.length > 1000 %>
+            <% truncated = article.text[0..1000] + '...' %>
+        <% else %>
+            <% truncated = article.text %>
+        <% end %>
+        <%= simple_format(truncated, :sanitize => false) %>
+      </p>
+      <hr>
+    </article>
+
+    <% end %>
+
+    <!-- Pagination -->
+    <!--<div class="pagination">-->
+      <!--<a href="#" class="button previous">Previous Page</a>-->
 
 
-              <div class="ui attached header" id="textboxEditing">
-                <p style="font-size: xx-small"></p>
-              </div>
+      <!--<div class="pages">-->
+        <!--<a href="#" class="active">1</a>-->
+        <!--<a href="#">2</a>-->
+        <!--<a href="#">3</a>-->
+        <!--<a href="#">4</a>-->
+        <!--<span>&hellip;</span>-->
+        <!--<a href="#">20</a>-->
+      <!--</div>-->
+      <!--<a href="#" class="button next">Next Page</a>-->
+    <!--</div>-->
 
-        </div>
-    <%end%>
   </div>
+</div>
+
+<!-- Sidebar -->
+<div id="sidebar" style="min-height: 1300px;">
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="icons" id="icons01">
+      <li class="home-button">
+        <div class="ui blue inverted huge button" onclick="window.location.href='/'" style="width: 100%; height: 100%;">
+          Home
+        </div>
+      </li>
+
+      <li class="home-button">
+        <div class="ui inverted huge purple button" onclick="window.location.href='/resume'" style="width: 100%; height: 100%;">
+          Resume
+        </div>
+      </li>
+
+      <li class="home-button">
+        <div class="ui inverted huge red button" onclick="window.location.href='/contact'" style="width: 100%; height: 100%;">
+          Contact
+        </div>
+      </li>
+      <li class="home-button">
+        <div class="ui inverted yellow huge button" onclick="window.location.href='/projects'" style="width: 100%; height: 100%;">
+          Projects
+        </div>
+      </li>
+      <li class="home-button">
+        <div class="ui inverted violet huge button" onclick="window.location.href='/pictures'" style="width: 100%; height: 100%;">
+          Pictures
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Recent Posts -->
+  <section class="box recent-posts">
+    <header>
+      <h2>Recent Posts</h2>
+    </header>
+
+    <ul>
+      <% @latest_arts.each do |art| %>
+        <li><%= link_to art.title , art , :id=> "articleLink" %></li>
+      <% end %>
+    </ul>
+  </section>
+
+  <!-- Calendar -->
+  <!--<section class="box calendar">-->
+    <!--<div class="inner">-->
+      <!--<table>-->
+        <!--<caption>July 2014</caption>-->
+        <!--<thead>-->
+        <!--<tr>-->
+          <!--<th scope="col" title="Monday">M</th>-->
+          <!--<th scope="col" title="Tuesday">T</th>-->
+          <!--<th scope="col" title="Wednesday">W</th>-->
+          <!--<th scope="col" title="Thursday">T</th>-->
+          <!--<th scope="col" title="Friday">F</th>-->
+          <!--<th scope="col" title="Saturday">S</th>-->
+          <!--<th scope="col" title="Sunday">S</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+          <!--<td colspan="4" class="pad"><span>&nbsp;</span></td>-->
+          <!--<td><span>1</span></td>-->
+          <!--<td><span>2</span></td>-->
+          <!--<td><span>3</span></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td><span>4</span></td>-->
+          <!--<td><span>5</span></td>-->
+          <!--<td><a href="#">6</a></td>-->
+          <!--<td><span>7</span></td>-->
+          <!--<td><span>8</span></td>-->
+          <!--<td><span>9</span></td>-->
+          <!--<td><a href="#">10</a></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td><span>11</span></td>-->
+          <!--<td><span>12</span></td>-->
+          <!--<td><span>13</span></td>-->
+          <!--<td class="today"><a href="#">14</a></td>-->
+          <!--<td><span>15</span></td>-->
+          <!--<td><span>16</span></td>-->
+          <!--<td><span>17</span></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td><span>18</span></td>-->
+          <!--<td><span>19</span></td>-->
+          <!--<td><span>20</span></td>-->
+          <!--<td><span>21</span></td>-->
+          <!--<td><span>22</span></td>-->
+          <!--<td><a href="#">23</a></td>-->
+          <!--<td><span>24</span></td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td><a href="#">25</a></td>-->
+          <!--<td><span>26</span></td>-->
+          <!--<td><span>27</span></td>-->
+          <!--<td><span>28</span></td>-->
+          <!--<td class="pad" colspan="3"><span>&nbsp;</span></td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      <!--</table>-->
+    <!--</div>-->
+  <!--</section>-->
 </div>
 <% if user_signed_in? %>
     <% if current_user.email== "kpahawa@gmail.com" %>

@@ -1,18 +1,23 @@
+<div class="projectWrapper">
+  <div class="project_main">
+    <div class="inner">
+        <p>
+          <strong>Title:</strong>
+          <%= @project.title %>
+        </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+        <p>
+          <strong>Summary:</strong>
+          <%= @project.summary %>
+        </p>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @project.summary %>
-</p>
+        <p>
+          <strong>Url:</strong>
+          <%= @project.url %>
+        </p>
 
-<p>
-  <strong>Url:</strong>
-  <%= @project.url %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+        <%= link_to 'Edit', edit_project_path(@project), {:class=>'ui blue button'} %> |
+        <%= link_to 'Back', projects_path, {:class=>'ui black button'} %>
+    </div>
+  </div>
+</div>

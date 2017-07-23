@@ -5,156 +5,66 @@
         <%end%>
     <%end%>
 <%end%>
-<div class="container" id="topHome">
-  <h1 class="ui header" id="welcomeMessage">Welcome!</h1>
-  <div class="sub header" id="welcomeMessageSub">My name is Karan and this a website by me and about me. Feel free to look around!</div>
-  <div class="ui container">
-    <div class="ui three column grid" style="margin-bottom: 10em;">
-        <div class="column">
 
-          <div class="ui special cards">
-            <div class = "card" style="width: 100% !important;">
-              <div class = "blurring dimmable image">
-                <div class="ui inverted dimmer transition hidden" style="display: block !important;">
-                  <div class="content">
-                    <div class="center">
-                      <div class="ui primary button" onclick = "window.location.href='/articles'">Blog</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="container">
-                  <i class="massive file text outline icon" id="homeTextIcon"></i>
-                </div>
-              </div>
-            </div>
+
+<div id="wrapper" class="homeBG home_wrapper">
+  <div id="main" class="home_main">
+    <div class="inner home_inner">
+
+      <h1 id="text02">I'm <strong>Karan</strong>, and I love to build stuff.</h1>
+      <p id="text01">This website is by me and about me.</p>
+      <ul class="icons" id="icons01">
+        <li class="home-button">
+          <div class="ui blue inverted huge button" onclick="window.location.href='/articles'" style="width: 100%; height: 100%;">
+            Blog
           </div>
-        </div>
+        </li>
 
-        <div class="column">
-        <div class="projSection">
-          <%= link_to 'Projects', {controller: "projects", action: "index"},:class => "ui red ribbon label" , :id => "homeLabel" %>
-          <span id="projSpan">Recent Projects</span>
-
-          <% if @proj == [] %>
-              <h1 id="homePicture">No Projects yet :( </h1>
-
-          <% else %>
-              <table style="margin-top: .6em;border-color: #EEEEEE;">
-                <% @proj.each do |project| %>
-                    <tr style="margin-bottom: .5em;">
-                      <td style="width: 70% !important;">
-                        <h3><%=
-                            link_to project.title,
-                                    {controller: "projects", action: "index"},
-                                    :class => "ui dividing header",
-                                    :id => "homeArticle"
-                        %>
-                          <span style="font-size: medium">&nbsp;&nbsp;<%=  project.created_at.strftime("%d %b %Y") %></span>
-                        </h3>
-                      </td>
-                      <td>
-                        <a href="<%= project.url %>" id="projURL"> Link  </a>
-                      </td>
-                    </tr>
-                    <!--<div class="ui grid" id="gridLayout">-->
-                    <!--<div class="six wide column" style="width: 50% !important;">-->
-                    <!-- -->
-                    <!--</div>-->
-
-                    <!--<div class="four wide column" id="projURL">-->
-                    <!-- -->
-                    <!--</div>-->
-                    <!--</div>-->
-
-                <% end %>
-              </table>
-
-          <%end%>
-
-        </div>
-      </div>
-
-        <div class="column">
-        <div class="picSection">
-          <%= link_to 'Pictures', {controller: "pictures", action: "index"},:class => "ui yellow ribbon label" , :id => "homeLabel" %>
-          <span id="picSpan">Recent Pictures</span>
-          <br>
-          <br>
-          <div class="ui two column grid">
-
-            <% if @pics == [] %>
-                <br />
-                <h1 id="homePicture">No Pictures yet :( </h1>
-            <%else%>
-                <% i = 0 %>
-                <% @pics.each do |pic| %>
-                    <% url = pic.url %>
-                    <% title = pic.title %>
-                    <% summary = pic.description %>
-                    <div class="column">
-                      <a class="image" href="/pictures/<%= pic.id %>">
-                        <div class="ui special cards" id="homeCards">
-                          <div class = "green card" id="homeCard">
-                            <div class = "dimmable image">
-                              <div class="ui dimmer">
-                                <div class="content">
-                                  <div class="center">
-                                    <h3 style="background:white;"><%= title %></h3>
-                                    <p style="background:darkgreen;"><%= summary %></p>
-                                  </div>
-                                </div>
-                              </div>
-                              <img src="<%= url %>" class="homePic">
-                            </div>
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-
-                    <% i += 1 %>
-                <% end %>
-            <%end %>
+        <li class="home-button">
+          <div class="ui inverted huge purple button" onclick="window.location.href='/resume'" style="width: 100%; height: 100%;">
+            Resume
           </div>
-        </div>
-      </div>
+        </li>
+
+        <li class="home-button">
+          <div class="ui inverted huge red button" onclick="window.location.href='/contact'" style="width: 100%; height: 100%;">
+            Contact
+          </div>
+        </li>
+        <li class="home-button">
+          <div class="ui inverted yellow huge button" onclick="window.location.href='/projects'" style="width: 100%; height: 100%;">
+            Projects
+          </div>
+        </li>
+        <li class="home-button">
+          <div class="ui inverted violet huge button" onclick="window.location.href='/pictures'" style="width: 100%; height: 100%;">
+            Pictures
+          </div>
+        </li>
+      </ul>
+
+      <ul class="icons" id="icons01">
+        <li>
+          <div class="ui circular facebook icon button" onclick="window.location.href='https://www.facebook.com/TheBluthCompany'">
+            <i class="big facebook icon"></i>
+          </div>
+        </li>
+        <li>
+          <div class="ui circular github icon button" onclick="window.location.href='https://www.github.com/kpahawa'">
+            <i class="big github icon"></i>
+          </div>
+        </li>
+        <li>
+          <div class="ui circular linkedin icon button" onclick="window.location.href='https://www.linkedin.com/in/kpahawa/'">
+            <i class="big linkedin icon"></i>
+          </div>
+        </li>
+        <li>
+          <div class="ui circular instagram icon button" onclick="window.location.href='https://www.instagram.com/karanpahawa/'">
+            <i class="big instagram icon"></i>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-  <!--Just make sure the background color matches this hr tag-->
-  <hr>
-    <table id="extraLinksTable">
-      <tr>
-        <td id="bottomTD">
-          <div class="ui inverted orange button" id="firstBottom" onclick="window.location.href='/resume'">
-            <span><i class="large file outline icon" id="extraIcon"></i> </span> Resume
-          </div>
-        </td>
-
-        <td id="bottomTD">
-          <div class="ui inverted blue button" id="bottomButtons" onclick="window.location.href='https://www.facebook.com/TheBluthCompany'">
-            <span><i class="large facebook icon" id="extraIcon"></i> </span> Facebook
-          </div>
-        </td>
-        <td id="bottomTD">
-          <div class="ui inverted red button" id="bottomButtons" onclick="window.location.href='/contact'">
-            <span><i class="large mail icon" id="extraIcon"></i> </span> Contact
-          </div>
-        </td>
-
-        <td id="bottomTD">
-          <div class="ui inverted black button" id="bottomButtons" onclick="window.location.href='https://www.linkedin.com/in/kpahawa'">
-            <span><i class="large linkedin square icon" id="extraIcon"></i> </span> LinkedIn
-          </div>
-        </td>
-        <td id="bottomTD">
-          <div class="ui inverted white button" id="bottomButtons" onclick = "window.location.href='https://github.com/kpahawa'">
-            <span><i class="large github square icon" id="extraIcon"></i> </span> Github
-          </div>
-        </td>
-      </tr>
-    </table>
 </div>
-<script>
-    $('.special.cards .image').dimmer({
-        on: 'hover'
-    });
-</script>

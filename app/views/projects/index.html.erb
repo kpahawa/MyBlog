@@ -1,31 +1,49 @@
-<h1 style="text-align: center;"> Past Projects </h1>
 
-
-<div class="bContainer">
-  <div class="ui divided items">
-    <% @projects.each do |project| %>
-        <div class="item" id="blog_container">
-          <h2 class="ui top attached header" id="linkEditing"><%= link_to project.title , project.url , :id=> "articleLink" %>
-            <span id="articleDate"><%= project.created_at.strftime(" - %d %b.  %Y")%></span>
-            <% if user_signed_in? %>
-                <% if current_user.email== "kpahawa@gmail.com" %>
-                    <span><%= link_to 'Edit', edit_project_path(project) %></span>
-                <%end%>
-            <%end%>
-          </h2>
-          <div class="ui attached header" id="textboxEditing">
-            <%= simple_format(project.summary, {}, :sanitize => false)  %>
-          </div>
+<div class="projectWrapper">
+  <div class="project_main">
+    <div class="inner">
+      <section id="home-section" class="active">
+        <div>
+            <div class="inner">
+              <ul id="buttons01" style="text-align: center;">
+                <li><button class="ui inverted red button large" onclick="window.location.href=('/')">Home</button></li>
+                <li><button class="ui inverted purple button large" onclick="window.location.href=('/resume')">Resume</button></li>
+                <li><button class="ui inverted green button large" onclick="window.location.href=('/articles')">Blog</button></li>
+                <li><button class="ui inverted orange button large" onclick="window.location.href=('/pictures')">Pictures</button></li>
+              </ul>
+              <h1 id="text03" style="text-align: center">Past Projects</h1>
+            </div>
         </div>
-    <%end%>
+        <hr id="divider05">
+        <% @projects.each do |project| %>
+            <div class="columns" id="columns01">
+              <div class="inner">
+                <div>
+                  <p id="text" style="text-align: center"><%= project.title %></p>
+                  <span id="text"><%= project.created_at.strftime("%d %b.  %Y")%></span>
+                  <p id="text"><%= simple_format(project.summary, {}, :sanitize => false)  %></p>
+                  <ul class="buttons" id="buttons04">
+                    <li><%= link_to 'Link to Project' , project.url, {:class=> 'ui red button'}  %></li>
+                    <% if  user_signed_in? and current_user.email== "kpahawa@gmail.com" %>
+                        <br>
+                        <li><%= link_to 'Edit', edit_project_path(project), {:class=> 'ui green button'} %></li>
+                    <%end%>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        <hr id="divider06">
+        <% end %>
+      </section>
+    </div>
   </div>
-</div>
+
 
 <br>
-<% if user_signed_in? %>
-    <% if current_user.email== "kpahawa@gmail.com" %>
+
+    <% if user_signed_in? and current_user.email== 'kpahawa@gmail.com' %>
         <div class="container" id="newArticleContainer">
-          <%= link_to 'New Project', new_project_path %>
+        <%= link_to 'New Project', new_project_path, {:class => 'ui yellow button'} %>
         </div>
-    <%end%>
-<% end %>
+    <% end %>
+</div>
