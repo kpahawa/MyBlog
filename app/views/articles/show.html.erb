@@ -12,9 +12,7 @@
       </header>
 
       <div class="articleContainer">
-        <p>
-          <%= simple_format(@article.text, {:id=>'articleText'}, :sanitize => false) %>
-        </p>
+          <%= simple_format(@article.text, :sanitize => false) %>
       </div>
 
       <hr>
