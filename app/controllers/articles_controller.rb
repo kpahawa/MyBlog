@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   respond_to :html
 
   def index
-    @articles = Article.all.paginate(:page => params[:page], :per_page => 5)
+    @articles = Article.paginate(:page => params[:page], :per_page => 5)
     @latest_arts = Article.last(5)
     @latest_arts = @latest_arts.reverse
     @respond = {:articles=> @articles, :latest_arts=> @latest_arts}

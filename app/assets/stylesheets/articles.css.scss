@@ -12,8 +12,6 @@
   box-sizing: border-box;
 }
 
-
-
 /* Basic */
 
 body {
@@ -335,49 +333,6 @@ ol.default li {
   padding-left: 0.25em;
 }
 
-/* Pagination */
-
-.pagination .pages {
-  display: inline-block;
-  font-family: 'Open Sans Condensed', sans-serif;
-  font-weight: 700;
-}
-
-.pagination .pages span {
-  display: inline-block;
-  width: 1.5em;
-  text-align: center;
-  margin: 0 0.4em 0 0;
-}
-
-.pagination .pages a {
-  cursor: pointer;
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  background-color: #e8e8e8;
-  color: #565656;
-  margin: 0 0.4em 0 0;
-  border-radius: 0.4em;
-  -moz-transition: background-color .25s ease-in-out;
-  -webkit-transition: background-color .25s ease-in-out;
-  -ms-transition: background-color .25s ease-in-out;
-  transition: background-color .25s ease-in-out;
-  box-shadow: inset 0 0.075em 0.25em 0 rgba(0, 0, 0, 0.1);
-}
-
-.pagination .pages a:hover {
-  background-color: #dadada;
-}
-
-.pagination .pages a.active {
-  background-color: #364050;
-  color: #fff;
-  box-shadow: none;
-  text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.5);
-}
-
 /* Box */
 
 .box.calendar .inner {
@@ -595,7 +550,7 @@ ol.default li {
 }
 
 .articleContainer {
-  width: 50%;
+  width: 75%;
   margin: auto;
   text-align: left;
   display: block;
@@ -616,6 +571,10 @@ ol.default li {
 .control_buttons {
   margin-bottom: 1rem;
 
+}
+
+.sidebar_button {
+  display: none;
 }
 /* Sidebar */
 
@@ -754,30 +713,6 @@ ol.default li {
   z-index: 1;
 }
 
-/* Copyright */
-
-#copyright {
-  padding-bottom: 2em;
-}
-
-#copyright p {
-  opacity: 0.75;
-}
-
-#copyright a {
-  color: inherit !important;
-}
-
-#copyright:before {
-  content: '';
-  border-top: solid 1px;
-  border-bottom: solid 1px;
-  border-color: #171E29;
-  border-color: rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.075), 0px 1px 0px 0px rgba(255, 255, 255, 0.075);
-  display: block;
-}
-
 /* Desktop */
 
 @media screen and (min-width: 737px) {
@@ -837,33 +772,6 @@ ol.default li {
   button.huge {
     font-size: 1.5em;
     padding: 0.75em 2em 0.75em 2em;
-  }
-
-  /* Pagination */
-
-  .pagination {
-    padding: 3em 0 0 0;
-  }
-
-  .pagination .previous {
-    margin-right: 0.6em;
-  }
-
-  .pagination .next {
-    margin-left: 0.2em;
-  }
-
-  .pagination .pages a {
-    width: 2.75em;
-    height: 2.75em;
-    line-height: 2.75em;
-  }
-
-  .pagination .button {
-    height: 2.75em;
-    padding-top: 0;
-    padding-bottom: 0;
-    line-height: 2.75em;
   }
 
   /* Box */
@@ -1029,6 +937,17 @@ ol.default li {
     opacity: 0.35;
   }
 
+  /* article container */
+  .articleContainer {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    display: block;
+  }
+
+  .articleContainer > p {
+    font-size: 1.6em;
+  }
   /* Content */
 
   #content {
@@ -1190,18 +1109,10 @@ ol.default li {
     padding: 0.75em 0 0.75em 0;
     margin: 0.5em 0 0.5em 0;
   }
-
-  /* Pagination */
-
-  .pagination .pages {
-    display: none;
-  }
-
   /* Box */
 
   .box.post {
-    padding-bottom: 5em;
-    margin-bottom: 6em;
+    margin-bottom: 3em;
   }
 
   .box.post header > p {
@@ -1272,8 +1183,14 @@ ol.default li {
   /* Content */
 
   #content {
-    margin-top: 44px;
+    //margin-top: 44px;
     padding: 3em 20px 2em 20px;
+  }
+
+  .articleContainer > p {
+    color: black;
+    font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif !important;
+    font-size: 1.3rem;
   }
 
   /* Sidebar */
@@ -1304,7 +1221,7 @@ ol.default li {
 
 /* Off-Canvas Sidebar */
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
 
   /* Basic */
 
@@ -1312,6 +1229,17 @@ ol.default li {
     overflow-x: hidden;
   }
 
+  .sidebar_button {
+    display: block;
+  }
+  
+  #sidebar_button {
+    width: 100%;
+  }
+
+  #topbar_options {
+    display: none;
+  }
   /* Content */
 
   #content {
@@ -1323,17 +1251,12 @@ ol.default li {
     -webkit-transition: -webkit-transform 0.5s ease;
     -ms-transition: -ms-transform 0.5s ease;
     transition: transform 0.5s ease;
-    margin-top: 44px;
+    //margin-top: 44px;
     margin-left: 0;
     margin-right: 0;
-    min-height: 0 !important;
   }
 
   /* Sidebar */
-
-  #titleBar {
-    display: block;
-  }
 
   #sidebar {
     -moz-backface-visibility: hidden;
@@ -1357,7 +1280,7 @@ ol.default li {
     transform: translateX(-14em);
   }
 
-  body.sidebar-visible #content, body.sidebar-visible #titleBar {
+  body.sidebar-visible #content, body.sidebar-visible {
     -moz-transform: translateX(14em);
     -webkit-transform: translateX(14em);
     -ms-transform: translateX(14em);

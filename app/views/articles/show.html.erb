@@ -1,16 +1,16 @@
-<div id="container" xmlns="http://www.w3.org/1999/html" style="text-align: center;">
+<div id="container" xmlns="http://www.w3.org/1999/html" style="text-align: center; background-color: white">
   <div class="inner">
     <article class="box post post-excerpt">
       <header style="text-align: center;">
         <h2><%= @article.title %></h2>
-        <span class="article_date">
+        <span class="">
           <span class="date"><span class="month"><%= @article.created_at.strftime("%b")%></span>
           <span class="day"><%= @article.created_at.strftime(" %d ")%></span>
           <span class="year">, <%= @article.created_at.strftime(" %Y ")%></span></span>
         </span>
 
       </header>
-
+    <br>
       <div class="articleContainer">
           <%= simple_format(@article.text, :sanitize => false) %>
       </div>

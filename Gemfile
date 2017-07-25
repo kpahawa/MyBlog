@@ -8,6 +8,7 @@ gem 'mail_form'
 gem 'foundation-rails', '5.4.3.1'
 gem 'tinymce-rails'
 gem 'will_paginate'
+gem 'will_paginate_semantic_ui'
 # gem 'rails_12factor', group: :production
 # gem 'tzinfo'
 # gem 'tzinfo-data',  platforms: [:x64_mingw, :mingw, :mswin]

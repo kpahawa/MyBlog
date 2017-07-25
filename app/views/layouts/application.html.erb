@@ -24,11 +24,15 @@
   </head>
 
   <body class="is-ready">
-        <% if user_signed_in? %>
-            Logged in as <strong><%= current_user.email %></strong>.
+     <div id="container" xmlns="http://www.w3.org/1999/html" style="text-align: center;">
+        <div class="inner">
+            <% if user_signed_in? %>
+                Logged in as <strong><%= current_user.email %></strong>.
 
-            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'ui inverted red button' %>
-        <% end %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'ui inverted red button' %>
+            <% end %>
+      </div>
+     </div>
       <%= yield %>
   </body>
 </html>
