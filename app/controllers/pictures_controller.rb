@@ -4,7 +4,8 @@ class PicturesController < ApplicationController
   respond_to :html
 
   def index
-    @pictures = Picture.all
+    # @pictures = Picture.all
+    @pictures = Picture.paginate(:page => params[:page], :per_page => 10)
     respond_with(@pictures)
   end
 

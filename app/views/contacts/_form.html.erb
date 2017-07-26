@@ -1,8 +1,45 @@
+<div class="contacts_mobile_container">
+  <button class="ui icon button" id="contacts_hideshow_button" onclick="hideShowButtons()">
+    <i class="icon large plus square oultline"></i>
+  </button>
+
+  <ul class="icons" id="contacts_topbar_options">
+    <li class="home-button">
+      <div class="ui red huge button" onclick="window.location.href='/'" style="width: 100%; height: 100%;">
+        Home
+      </div>
+    </li>
+
+    <li class="home-button">
+      <div class="ui huge blue button" onclick="window.location.href='/resume'" style="width: 100%; height: 100%;">
+        Resume
+      </div>
+    </li>
+
+    <li class="home-button">
+      <div class="ui huge purple button" onclick="window.location.href='/pictures'" style="width: 100%; height: 100%;">
+        Pictures
+      </div>
+    </li>
+    <li class="home-button">
+      <div class="ui green huge button" onclick="window.location.href='/articles'" style="width: 100%; height: 100%;">
+        Blog
+      </div>
+    </li>
+    <li class="home-button">
+      <div class="ui orange huge button" onclick="window.location.href='/projects'" style="width: 100%; height: 100%;">
+        Projects
+      </div>
+    </li>
+  </ul>
+</div>
+
 <div class="contact_screen_bg">
   <div class="main_contact">
     <div id="inner" style="margin-bottom: 2rem;">
       <ul id="buttons01" style="text-align: center">
         <li><button class="ui  red button large" onclick="window.location.href=('/')">Home</button></li>
+        <li><button class="ui  blue button large" onclick="window.location.href=('/resume')">Resume</button></li>
         <li><button class="ui purple button large" onclick="window.location.href=('/pictures')">Pictures</button></li>
         <li><button class="ui green button large" onclick="window.location.href=('/articles')">Blog</button></li>
         <li><button class="ui orange button large" onclick="window.location.href=('/projects')">Projects</button></li>
@@ -78,4 +115,13 @@
         var secretKeyLocation = document.getElementById("secretKeyLocation");
         secretKeyLocation.innerHTML = "<div class = 'ui blue label' id='skLocation'><p><%= @word %></p>";
     }
+
+    function hideShowButtons() {
+        $("#contacts_topbar_options").toggle(function() {
+            $('#contacts_topbar_options').animate({top: 0})
+        }, function() {
+            $('#contacts_topbar_options').animate({top: 100})
+        })
+    }
+
 </script>

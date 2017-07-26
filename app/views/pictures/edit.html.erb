@@ -1,6 +1,43 @@
-<h1>Editing picture</h1>
+<% if user_signed_in? %>
+    <% if current_user.email != "kpahawa@gmail.com" %>
+        <div class="projectWrapper">
+          <div class="project_main">
+            <div class="inner">
+              <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+              <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+              <div class="container" style="text-align: center;">
+                <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<%= render 'form' %>
+    <% else %>
+        <div class="projectWrapper" id="toshow">
+          <div class="project_main">
+            <div class="inner">
 
-<%= link_to 'Show', @picture %> |
-<%= link_to 'Back', pictures_path %>
+              <h1>Editing picture</h1>
+
+              <%= render 'form' %>
+
+              <%= link_to 'Show', @picture, {:class=>'ui blue button'} %> |
+              <%= link_to 'Back', pictures_path, {:class=>'ui black button'} %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+<% else %>
+    <div class="projectWrapper">
+      <div class="project_main">
+        <div class="inner">
+          <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+          <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+          <div class="container" style="text-align: center;">
+            <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+

@@ -1,23 +1,50 @@
-<p style="text-align: center">
-  <strong><%= @picture.title %></strong>
-</p>
-
-<p style="text-align: center">
-  <%= @picture.description %>
-</p>
-<div class="container"><img src="<%= @picture.url %>" class="picContainer"></div>
-
-
 <% if user_signed_in? %>
-    <% if current_user.email== "kpahawa@gmail.com" %>
-        <div class="container" style="margin-top: 5em !important;">
-          <%= link_to 'Edit', edit_picture_path(@picture),:class => "ui red button" %> |
-          <%= link_to 'Back', pictures_path,:class => "ui blue button" %>
+    <% if current_user.email != "kpahawa@gmail.com" %>
+        <div class="projectWrapper">
+          <div class="project_main">
+            <div class="inner">
+              <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+              <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+              <div class="container" style="text-align: center;">
+                <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-    <%end%>
-<%else%>
-    <div class="container" style="margin-top: 5em !important;">
-      <%= link_to 'Back', pictures_path,:class => "ui blue button" %>
+    <% else %>
+      <div class="projectWrapper" id="toshow">
+       <div class="project_main">
+         <div class="inner">
+
+               <p style="text-align: center">
+                 <strong><%= @picture.title %></strong>
+               </p>
+
+               <p style="text-align: center">
+                 <%= @picture.description %>
+               </p>
+               <div class="container"><img src="<%= @picture.url %>" class="picContainer"></div>
+
+               <div class="container" style="margin-top: 5em !important;">
+                 <%= link_to 'Edit', edit_picture_path(@picture),:class => "ui red button" %> |
+                 <%= link_to 'Back', pictures_path,:class => "ui blue button" %>
+               </div>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+<% else %>
+    <div class="projectWrapper">
+      <div class="project_main">
+        <div class="inner">
+          <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+          <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+          <div class="container" style="text-align: center;">
+            <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+          </div>
+        </div>
+      </div>
     </div>
-<%end%>
+<% end %>

@@ -1,23 +1,52 @@
-<div class="projectWrapper">
-  <div class="project_main">
-    <div class="inner">
-        <p>
-          <strong>Title:</strong>
-          <%= @project.title %>
-        </p>
+<% if user_signed_in? %>
+    <% if current_user.email != "kpahawa@gmail.com" %>
+        <div class="projectWrapper">
+          <div class="project_main">
+            <div class="inner">
+              <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+              <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+              <div class="container" style="text-align: center;">
+                <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <p>
-          <strong>Summary:</strong>
-          <%= @project.summary %>
-        </p>
+    <% else %>
+        <div class="projectWrapper" id="toshow">
+          <div class="project_main">
+            <div class="inner">
+              <p>
+                <strong>Title:</strong>
+                <%= @project.title %>
+              </p>
 
-        <p>
-          <strong>Url:</strong>
-          <%= @project.url %>
-        </p>
+              <p>
+                <strong>Summary:</strong>
+                <%= @project.summary %>
+              </p>
 
-        <%= link_to 'Edit', edit_project_path(@project), {:class=>'ui blue button'} %> |
-        <%= link_to 'Back', projects_path, {:class=>'ui black button'} %>
+              <p>
+                <strong>Url:</strong>
+                <%= @project.url %>
+              </p>
+
+              <%= link_to 'Edit', edit_project_path(@project), {:class=>'ui blue button'} %> |
+              <%= link_to 'Back', projects_path, {:class=>'ui black button'} %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+<% else %>
+    <div class="projectWrapper">
+      <div class="project_main">
+        <div class="inner">
+          <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+          <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+          <div class="container" style="text-align: center;">
+            <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+<% end %>
