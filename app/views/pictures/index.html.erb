@@ -2,35 +2,42 @@
     <% if current_user.email== "kpahawa@gmail.com" %>
     <div class="pictures_wrapper picturesBG" id="wrapper">
       <div class="" id="main">
-        <table>
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Description</th>
-              <th>Url</th>
-              <th>Datetime</th>
-              <th colspan="3"></th>
-            </tr>
-          </thead>
+        <div class="main_pictures">
+          <div class="pictures_inner inner">
+            <table>
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Description</th>
+                  <th>Url</th>
+                  <th>Datetime</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-          <tbody>
-            <% @pictures.each do |picture| %>
-              <tr>
-                <td><%= picture.title %></td>
-                <td><%= picture.description %></td>
-                <td><%= picture.url %></td>
-                <td><%= picture.datetime %></td>
-                <td><%= link_to 'Show', picture %></td>
-                <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
-                <td><%= link_to 'Destroy', picture, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-          </tbody>
-        </table>
+              <tbody>
+                <% @pictures.each do |picture| %>
+                  <tr>
+                    <td><%= picture.title %></td>
+                    <td><%= picture.description %></td>
+                    <td><%= picture.url %></td>
+                    <td><%= picture.datetime %></td>
+                    <td><%= link_to 'Show', picture , {:class => 'ui green button'}%></td>
+                    <td><%= link_to 'Edit', edit_picture_path(picture), {:class => 'ui purple button'} %></td>
+                    <td><%= link_to 'Destroy', picture,   :class => 'ui red button' , method: :delete, data: { confirm: 'Are you sure?' }%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
 
-        <br>
+            <br>
 
-        <%= link_to 'New Picture', new_picture_path %>
+            <%= link_to 'New Picture', new_picture_path, {:class => 'ui white button'} %>
+            <div class="pictures_pagination_container">
+              <%= will_paginate @pictures, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <%end%>

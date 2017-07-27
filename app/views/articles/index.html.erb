@@ -39,7 +39,7 @@
     <% if user_signed_in? %>
         <% if current_user.email== "kpahawa@gmail.com" %>
             <div class="container" id="newArticleContainer">
-              <%= link_to 'New Article', new_article_path , :id => "newArticleLink"%>
+              <%= link_to 'New Article', new_article_path , :id => 'newArticleLink', :class => 'ui blue button'%>
             </div>
         <%end%>
     <% end %>

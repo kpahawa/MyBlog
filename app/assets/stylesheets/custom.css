@@ -626,6 +626,13 @@ p .li {
     opacity: 1;
 }
 
+#termHeader {
+    color: white !important;
+}
+
+#termLineBreak {
+    color: crimson !important;
+}
 #submitButton {
     width: 100%;
 }
