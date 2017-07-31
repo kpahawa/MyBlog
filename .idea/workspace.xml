@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1386c09a-8db5-491e-956b-af7a99ce2f68" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/Karan Pahawa Resume.pdf" afterPath="$PROJECT_DIR$/app/assets/images/Karan Pahawa Resume.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/articles/index.html.erb" afterPath="$PROJECT_DIR$/app/views/articles/index.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/pictures/index.html.erb" afterPath="$PROJECT_DIR$/app/views/pictures/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/welcome/resume.erb" afterPath="$PROJECT_DIR$/app/views/welcome/resume.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Blog.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +41,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.599359">
-              <caret line="41" column="111" selection-start-line="41" selection-start-column="111" selection-end-line="41" selection-end-column="111" />
+            <state vertical-scroll-proportion="-18.653847">
+              <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8017094">
+              <caret line="150" column="30" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -127,8 +132,8 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/contacts.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css" />
         <option value="$PROJECT_DIR$/app/views/welcome/resume.erb" />
-        <option value="$PROJECT_DIR$/app/views/pictures/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/articles/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/pictures/index.html.erb" />
       </list>
     </option>
   </component>
@@ -319,7 +324,7 @@
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/html5up-striped/assets/css/main.css" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="inde&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/projects/index.html.erb&#10;index&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/articles/index.html.erb&#10;pictures.&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/pictures_controller.rb&#10;articles&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;custom.c&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/custom.css&#10;temp&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/welcome/temp.erb&#10;gem&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;gemfil&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;index.html.erb&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/articles/index.html.erb&#10;articlec&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;index.&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/articles/index.html.erb&#10;home&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/welcome/home.erb&#10;custom&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/custom.css&#10;appl&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/layouts/application.html.erb&#10;proj&#9;FILE&#9;file://C:/RailsProjects/Blog/app/models/project.rb&#10;pictures\ind&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/pictures/index.html.erb&#10;pic&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/pictures_controller.rb&#10;scaf&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/scaffolds.css.scss&#10;routes&#9;FILE&#9;file://C:/RailsProjects/Blog/config/routes.rb&#10;gemf&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;articlescon&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;index.html&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/pictures/index.html.erb" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/pictures/index.html.erb&#10;inde&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/projects/index.html.erb&#10;pictures.&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/pictures_controller.rb&#10;articles&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;custom.c&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/custom.css&#10;temp&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/welcome/temp.erb&#10;gem&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;gemfil&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;index.html.erb&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/articles/index.html.erb&#10;articlec&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;index.&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/articles/index.html.erb&#10;home&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/welcome/home.erb&#10;custom&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/custom.css&#10;appl&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/layouts/application.html.erb&#10;proj&#9;FILE&#9;file://C:/RailsProjects/Blog/app/models/project.rb&#10;pictures\ind&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/pictures/index.html.erb&#10;pic&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/pictures_controller.rb&#10;scaf&#9;FILE&#9;file://C:/RailsProjects/Blog/app/assets/stylesheets/scaffolds.css.scss&#10;routes&#9;FILE&#9;file://C:/RailsProjects/Blog/config/routes.rb&#10;gemf&#9;FILE&#9;file://C:/RailsProjects/Blog/Gemfile&#10;articlescon&#9;FILE&#9;file://C:/RailsProjects/Blog/app/controllers/articles_controller.rb&#10;index.html&#9;FILE&#9;file://C:/RailsProjects/Blog/app/views/pictures/index.html.erb" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -582,7 +587,7 @@
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34949496" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34949496" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32947367" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1048,18 +1053,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.599359">
-          <caret line="34" column="85" selection-start-line="34" selection-start-column="85" selection-end-line="34" selection-end-column="85" />
+        <state vertical-scroll-proportion="-18.653847">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/articles/index.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/pictures/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.599359">
-          <caret line="41" column="111" selection-start-line="41" selection-start-column="111" selection-end-line="41" selection-end-column="111" />
+        <state vertical-scroll-proportion="0.8017094">
+          <caret line="150" column="30" selection-start-line="150" selection-start-column="30" selection-end-line="150" selection-end-column="30" />
           <folding />
         </state>
       </provider>
