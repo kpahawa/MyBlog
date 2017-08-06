@@ -1,6 +1,35 @@
-<h1 style="text-align: center;">New article</h1>
-<%= render 'form' %>
+<% if user_signed_in? %>
+    <% if current_user.email != "kpahawa@gmail.com" %>
+        <div class="projectWrapper">
+          <div class="project_main">
+            <div class="inner">
+              <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+              <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+              <div class="container" style="text-align: center;">
+                <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<p style="margin-left: 30em;">
-  <%= link_to 'Back', articles_path %>
-</p>
+    <% else %>
+        <h1 style="text-align: center;">New article</h1>
+        <%= render 'form' %>
+
+        <p style="margin-left: 30em;">
+          <%= link_to 'Back', articles_path %>
+        </p>
+    <% end %>
+<% else %>
+    <div class="projectWrapper">
+      <div class="project_main">
+        <div class="inner">
+          <h1 style="text-align:center;" class="temp_error"> Restricted Access </h1>
+          <h1 style="text-align:center;" class="temp_error"> Looks like you tried to access a restricted page...</h1>
+          <div class="container" style="text-align: center;">
+            <div class="ui massive green button" onclick="window.location.href='/'" class="temp_error">Take me back to the home page</div>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
